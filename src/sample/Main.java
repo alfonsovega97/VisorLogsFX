@@ -18,8 +18,8 @@ public class Main extends Application {
 			
 			
 			
-			static ObservableList<String> list = FXCollections.observableArrayList();	
-			File log = new File("src/logs");
+			ObservableList<String> list = FXCollections.observableArrayList();
+			File log = new File("src/ArchivoLogs.txt");
 			Scanner sc;
 			//Bucle que lea hasta el final del archivo to juapo
 		        try {
