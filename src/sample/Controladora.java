@@ -10,7 +10,6 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
 
 public class Controladora implements Initializable {
 	
@@ -22,11 +21,11 @@ public class Controladora implements Initializable {
 private void lector () {
 		
 		list = FXCollections.observableArrayList();
-		File log = new File("../ArchivoLogs.txt");
+		
 		Scanner sc;
 		//Bucle que lea hasta el final del archivo 
 	        try {
-	        	sc = new Scanner(log);	            
+	        	sc = new Scanner("ArchivoLogs.txt");	            
 	            while (sc.hasNextLine()) {
 	                String linea = sc.nextLine();
 	                list.add(linea);
@@ -39,11 +38,16 @@ private void lector () {
 	        }
 	        	
 	}
+private void leerFichero() {
+	
+}
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		lector();
 		lista=new FilteredList(list);
+		
+		
 		
 	}
 	
