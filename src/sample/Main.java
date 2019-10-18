@@ -21,7 +21,5 @@ public class Main extends Application {
 		primaryStage.setTitle("Visor de Logs");
 		primaryStage.setScene(new Scene(root));
 		primaryStage.show();
-
 	}
-
 }
